@@ -1,64 +1,17 @@
 <!DOCTYPE html>
-<html>
-<head>
+<html lang="en">
+
+  <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>给你拜年啦！</title>
-    <style>
-        body {
-            background: linear-gradient(135deg, #ff6b6b, #ffd93d);
-            height: 100vh;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            font-family: "Microsoft YaHei", sans-serif;
-            margin: 0;
-        }
-        .card {
-            background: white;
-            padding: 40px;
-            border-radius: 20px;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.3);
-            text-align: center;
-            max-width: 80%;
-        }
-        h1 { color: #e74c3c; font-size: 2.5em; margin: 0 0 20px; }
-        .blessing { font-size: 1.2em; color: #333; line-height: 1.6; margin: 20px 0; }
-        .emoji { font-size: 3em; margin: 10px; }
-    </style>
-</head>
-<body>
-    <div class="card">
-        <div class="emoji">🧧🐉🎆</div>
-        <h1>新年快乐！</h1>
-        <div class="blessing">
-            马年大吉，万事如意！<br>
-            祝你在新的一年里：<br>
-            身体健康，工作顺利，<br>
-            财源滚滚，阖家幸福！
-        </div>
-        <div class="emoji">✨🎊🎉</div>
-    </div>
-    <script>
-        // 点击页面放烟花效果（简单示例）
-        document.addEventListener('click', function(e) {
-            const firework = document.createElement('div');
-            firework.textContent = '🎆';
-            firework.style.position = 'fixed';
-            firework.style.left = e.clientX + 'px';
-            firework.style.top = e.clientY + 'px';
-            firework.style.fontSize = '30px';
-            firework.style.pointerEvents = 'none';
-            firework.style.transition = 'transform 1s, opacity 1s';
-            document.body.appendChild(firework);
-            
-            setTimeout(() => {
-                firework.style.transform = 'translateY(-100px)';
-                firework.style.opacity = '0';
-            }, 10);
-            setTimeout(() => firework.remove(), 1000);
-        });
-    </script>
-</body>
+    <title>Interactive Snowfall 👉❄️</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" /><link rel="stylesheet" href="./style.css">
+
+  </head>
+    
+  <body>
+  <div id="root"></div>
+  <script type="module" src="./script.js"></script>
+  <div></div>
+  </body>
+  
 </html>
